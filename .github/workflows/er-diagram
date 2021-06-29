@@ -3,7 +3,8 @@ name: ER Diagram Bot
 
 on:
   push:
-    #branches: [er-diagram]
+    branches:
+      - er-diagram
   #workflow_dispatch:
     #inputs:
 
