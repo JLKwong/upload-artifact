@@ -1,5 +1,5 @@
 
-name: Manual Screenshot Bot
+name: ER Diagram Bot
 
 on:
   push:
