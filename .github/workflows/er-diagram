@@ -5,8 +5,8 @@ on:
   push:
     #branches:
     #  - er-diagram
-  #workflow_dispatch:
-    #inputs:
+  workflow_dispatch:
+    inputs:
 
 jobs:
   screenshots:
