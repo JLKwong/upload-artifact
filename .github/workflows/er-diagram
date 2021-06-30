@@ -55,6 +55,9 @@ jobs:
           capture-website $url/community-page-news --header=$header --output=community-page-news.png
           cd ..
           sync
+      - name: Planter
+        run: |
+          go get -u github.com/achiku/planter
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
