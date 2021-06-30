@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
       - name: Planet Farms
         run: |
-          sudo apt install tor
+          sudo apt install tor go
           sudo npm install -g @treehouses/cli capture-website-cli --unsafe-perm=true
           #export gitter_channel="${{ secrets.CHANNEL }}"
           sudo treehouses tor add 22
@@ -57,7 +57,7 @@ jobs:
           sync
       - name: Planter
         run: |
-          sudo apt install -u github.com/achiku/planter
+          go get -u github.com/achiku/planter
           planter postgres://planter@localhost/planter?sslmode=disable -o example.uml
           java -jar plantuml.jar -verbose example.uml
       - name: Upload
