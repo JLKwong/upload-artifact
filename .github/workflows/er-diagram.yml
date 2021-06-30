@@ -20,7 +20,9 @@ jobs:
           fetch-depth: 0
       - name: Planet Farms
         run: |
-          sudo apt install tor go
+          sudo apt install tor
+          rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
+          go version
           sudo npm install -g @treehouses/cli capture-website-cli --unsafe-perm=true
           #export gitter_channel="${{ secrets.CHANNEL }}"
           sudo treehouses tor add 22
