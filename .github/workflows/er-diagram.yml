@@ -58,8 +58,8 @@ jobs:
       - name: Planter
         run: |
           go get -u github.com/achiku/planter
-          $ planter postgres://planter@localhost/planter?sslmode=disable -o example.uml
-          $ java -jar plantuml.jar -verbose example.uml
+          planter postgres://planter@localhost/planter?sslmode=disable -o example.uml
+          java -jar plantuml.jar -verbose example.uml
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
